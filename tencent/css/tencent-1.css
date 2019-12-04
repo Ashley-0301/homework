@@ -1,0 +1,185 @@
+/* AshleyWu 2019.12.03 */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul li, ol li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #9f958b;
+}
+
+div{
+    width: 1070px;
+    height: 2496px;
+    margin: 0 auto;
+}
+
+/* 网页的头部 */
+
+#top{
+    width: 1070px;
+    height: 78px;
+}
+
+#top ul{
+    width: 1070px;
+    height: 78px;
+    
+}
+
+#top .first li{
+    float: left;
+}
+
+#top ul .logo{
+    width: 334px;
+    height: 78px;
+}
+
+#top ul .nav{
+    width: 514px;
+    height: 78px;
+}
+
+#top ul .nav .second{
+    width: 488px;
+    height: 78px;
+    margin: 0 13px;
+}
+
+.nav .second li a{
+    display: block;
+}
+
+.nav .second li{
+    float: left;
+}
+
+.second .nav1 .one{
+    width: 100px;
+    height: 78px;
+    background: url(../images/images/nav-1_01.png) no-repeat;
+}
+
+.second .nav1:hover .one{
+    background: url(../images/images/nav1-1_01.png) no-repeat;
+}
+
+.second .nav1 .two{
+    width: 124px;
+    height: 78px;
+    background: url(../images/images/nav-2_02.png) no-repeat;
+}
+
+.second .nav1:hover .two{
+    background: url(../images/images/nav1-2_02.png) no-repeat;
+}
+
+.second .nav1 .three{
+    width: 146px;
+    height: 78px;
+    background: url(../images/images/nav-3_02.png) no-repeat;
+}
+
+.second .nav1:hover .three{
+    background: url(../images/images/nav1-3_02.png) no-repeat;
+}
+
+.second .nav1 .four{
+    width: 118px;
+    height: 78px;
+    background: url(../images/images/nav-4_02.png) no-repeat;
+}
+
+.second .nav1:hover .four{
+    background: url(../images/images/nav1-4_02.png) no-repeat;
+}
+
+#top ul .login{
+    width: 222px;
+    height: 78px;
+    /* background: springgreen; */
+}
+
+.login ol{
+    width: 222px;
+    height: 78px;
+}
+
+.login ol .login-top{
+    width: 222px;
+    height: 38px;
+    text-align: right;
+    line-height: 38px;
+    font-size: 12px;
+    color: #9f958b;
+}
+
+.login ol .login-top .one{
+    margin-right: 8px;
+}
+
+.login ol .login-top .two{
+    margin-left: 6px;
+}
+
+.search{
+    width: 222px;
+    height: 42px;
+    text-align: right;
+}
+
+.search input{
+    height: 20px;
+    text-align: right;
+    position: relative;
+    right: -26px;
+}
+
+.search div{
+    display: inline-block;
+    width: 26px;
+    height: 20px;
+}
+
+.search div a{
+    display: block;
+    width: 26px;
+    height: 20px;
+    background: url(../images/images/s-btn_02.png) no-repeat;
+    position: absolute;
+    top: 44px;
+    /* right: 26px; */
+}
+
+/* 网页的banner */
+
+#banner{
+    width: 1440px;
+    height: 396px;
+    margin: 0 auto;
+    position: relative;
+    left: -220px;
+}
+
+/* 网页的内容 */
+
+#content{
+    width: 1070px;
+    height: 1610px;
+    background: slateblue;
+}
+
+/* 网页的底部 */
+
+#footer{
+    width: 1070px;
+    height: 414px;
+    background: tomato;
+}
