@@ -1,0 +1,110 @@
+/* AshleyWu 2019.12.03 */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul li, ol li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+div{
+    width: 1070px;
+    height: 2496px;
+    margin: 0 auto;
+    background: peachpuff;
+}
+
+/* 网页的头部 */
+
+#top{
+    width: 1070px;
+    height: 78px;
+    background: palevioletred;
+}
+
+#top ul{
+    width: 1070px;
+    height: 78px;
+    
+}
+
+#top .first li{
+    float: left;
+}
+
+#top ul .logo{
+    width: 334px;
+    height: 78px;
+    background: yellow;
+}
+
+#top ul .nav{
+    width: 514px;
+    height: 78px;
+    background: saddlebrown;
+}
+
+#top ul .nav ol .second{
+    width: 488px;
+    height: 78px;
+    margin: 0 13px;
+    clear: both;
+}
+
+
+
+#top ul .nav .second li:hover img{
+    position:relative;
+    z-index:-2px;
+}
+
+#top ul .nav .second li:hover{
+    display: none;
+}
+
+#top ul .nav .second li:hover .nav1{
+    display: block;
+}
+
+#top ul .nav .nav1{
+    width: 488px;
+    height: 78px;
+    margin: 0 13px;
+    
+    
+}
+
+#top ul .login{
+    width: 222px;
+    height: 78px;
+    background: springgreen;
+}
+/* 网页的banner */
+
+#banner{
+    /* width: 100%; */
+    height: 396px;
+    background: seagreen;
+}
+
+/* 网页的内容 */
+
+#content{
+    width: 1070px;
+    height: 1610px;
+    background: slateblue;
+}
+
+/* 网页的底部 */
+
+#footer{
+    width: 1070px;
+    height: 414px;
+    background: tomato;
+}
