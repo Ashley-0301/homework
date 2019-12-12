@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DolaAmeng</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    #box{
+        width: 500px;
+        height: 500px;
+        background: wheat;
+        margin: 50px auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .head{
+        width: 200px;
+        height: 190px;
+        border: 1px solid;
+        border-radius: 50%;
+        background: #09bae4;
+        position: absolute;
+        left: 150px;
+        top: 40px;
+    }
+
+    .face{
+        width: 160px;
+        height: 140px;
+        border: 1px solid;
+        border-radius: 50%;
+        background: white;
+        position: absolute;
+        left: 170px;
+        top: 86px;
+    }
+
+    .eye1{
+        width: 38px;
+        height: 46px;
+        border: 1px solid;
+        border-radius: 17px;
+        background: white;
+        position: absolute;
+        left: 210px;
+        top: 74px;
+    }
+
+    .eye2{
+        width: 38px;
+        height: 46px;
+        border: 1px solid;
+        border-radius: 17px;
+        background: white;
+        position: absolute;
+        left: 250px;
+        top: 74px;
+    }
+
+    .eye01{
+        width: 10px;
+        height: 10px;
+        border: 1px solid;
+        border-radius: 50%;
+        background: black;
+        position: absolute;
+        left: 232px;
+        top: 100px;
+    }
+
+    .eye02{
+        width: 10px;
+        height: 10px;
+        border: 1px solid;
+        border-radius: 50%;
+        background: black;
+        position: absolute;
+        left: 256px;
+        top: 100px;
+        animation: wink1 2.5s infinite;
+    }
+
+    .wink1{
+        width: 7px;
+        height: 2px;
+        border-top: 1px solid #000;
+        transform: rotate(-40deg);
+        position: absolute;
+        left: 258px;
+        top: 103px;
+        opacity: 0;
+        animation: wink2 2.5s infinite;
+    }
+
+    .wink2{
+        width: 7px;
+        height: 2px;
+        border-top: 1px solid #000;
+        transform: rotate(-140deg);
+        position: absolute;
+        left: 258px;
+        top: 106px;
+        opacity: 0;
+        animation: wink2 2.5s infinite;
+    }
+
+    @-webkit-keyframes wink1{
+        0%{
+            opacity: 1;
+        }
+        10%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 0;
+        }
+        90%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes wink2{
+        0%{
+            opacity: 1;
+        }
+        50%{
+            opacity: 1;
+        }
+        75%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+
+    .nose{
+        width: 20px;
+        height: 20px;
+        border: 1px solid;
+        border-radius: 50%;
+        background: -webkit-radial-gradient(76% 55%,circle,#fff 10%, #ca3e01 30%);
+        position: absolute;
+        left: 240px;
+        top: 115px;
+    }
+
+    .line1{
+        width: 10px;
+        height: 50px;
+        border-left: 2px solid black;
+        position: absolute;
+        left: 250px;
+        top: 136px;
+    }
+
+    .mouth{
+        width: 90px;
+        height: 40px;
+        border-radius: 50% 50%;
+        border-bottom: 4px solid #333;
+        position: absolute;
+        left: 206px;
+        top: 150px;
+    }
+
+    .beard1{
+        width: 40px;
+        height: 2px;
+        border-bottom: 2px solid #333;
+        transform: rotate(12deg);
+        position: absolute;
+        left: 185px;
+        top: 132px;
+    }
+
+    .beard2{
+        width: 40px;
+        height: 2px;
+        border-bottom: 2px solid #333;
+        position: absolute;
+        left: 185px;
+        top: 146px;
+    }
+
+    .beard3{
+        width: 40px;
+        height: 2px;
+        border-bottom: 2px solid #333;
+        transform: rotate(-12deg);
+        position: absolute;
+        left: 185px;
+        top: 160px;
+    }
+
+    .beard4{
+        width: 40px;
+        height: 2px;
+        border-bottom: 2px solid #333;
+        transform: rotate(-12deg);
+        position: absolute;
+        left: 276px;
+        top: 132px;
+    }
+
+    .beard5{
+        width: 40px;
+        height: 2px;
+        border-bottom: 2px solid #333;
+        position: absolute;
+        left: 276px;
+        top: 146px;
+    }
+
+    .beard6{
+        width: 40px;
+        height: 2px;
+        border-bottom: 2px solid #333;
+        transform: rotate(12deg);
+        position: absolute;
+        left: 276px;
+        top: 160px;
+    }
+    
+    .scraf{
+        width: 142px;
+        height: 15px;
+        background: #ab2700;
+        border: 1px solid black;
+        border-radius: 5px;
+        position: absolute;
+        left: 180px;
+        top: 211px;
+    }
+
+    .hand1{
+        width: 50px;
+        height: 24px;
+        background: #09bae4;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #666;
+        transform: rotate(-40deg);
+        position: absolute;
+        left: 149px;
+        top: 240px;
+    }
+
+    .hand2{
+        width: 50px;
+        height: 24px;
+        background: #09bae4;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #666;
+        /* transform: rotate(-219deg); */
+        position: absolute;
+        left: 302px;
+        top: 222px;
+        animation: shake 2s linear infinite;
+    }
+
+    .hand01{
+        width: 32px;
+        height: 30px;
+        background: #fff;
+        border: 1px solid #333;
+        border-radius: 50%;
+        position: absolute;
+        left: 140px;
+        top: 250px;
+    }
+
+    .hand02{
+        width: 32px;
+        height: 30px;
+        background: #fff;
+        border: 1px solid #333;
+        border-radius: 50%;
+        position: absolute;
+        /* left: 330px;
+        top: 203px; */
+        animation: hand 2s linear infinite;
+    }
+
+    @-webkit-keyframes shake{
+        0%{
+            transform: rotate(-222deg);
+        }
+        25%{
+            transform: rotate(-215deg);
+        }
+        50%{
+            transform: rotate(-210deg);
+        }
+        75%{
+            transform: rotate(-215deg);
+        }
+        100%{
+            transform: rotate(-222deg);
+        }
+    }
+
+    @-webkit-keyframes hand{
+        0%{
+            top: 200px;
+            left: 330px;
+        }
+        25%{
+            top: 203px;
+            left: 333px;
+        }
+        50%{
+            top: 205px;
+            left: 336px;
+        }
+        75%{
+            top: 203px;
+            left: 333px;
+        }
+        100%{
+            top: 200px;
+            left: 330px;
+        }
+    }
+
+    .body1{
+        width: 136px;
+        height: 20px;
+        background: #09bae4;
+        position: absolute;
+        left: 184px;
+        top: 228px;
+    }
+
+    .body2{
+        width: 134px;
+        height: 70px;
+        background: #09bae4;
+        border-left: 1px solid #333;
+        border-right: 1px solid #333;
+        position: absolute;
+        left: 184px;
+        top: 248px;
+    }
+
+    .body3{
+        width: 94px;
+        height: 88px;
+        background: #fff;
+        border: 1px solid black;
+        border-radius: 50%;
+        position: absolute;
+        left: 204px;
+        top: 211px;
+    }
+
+    .bag{
+        width: 82px;
+        height: 41px;
+        /* background: #fff; */
+        border-radius: 0 0 82px 82px;
+        background: #fff;
+        border: 1px solid #000;
+        position: absolute;
+        left: 210px;
+        top: 250px;
+    }
+
+    .leg{
+        width: 18px;
+        height: 10px;
+        background: wheat;
+        border-top: 1px solid #000;
+        border-radius: 18px 18px 0 0;
+        position: absolute;
+        left: 243px;
+        top: 310px;
+    }
+
+    .feet1{
+        width: 70px;
+        height: 21px;
+        background: #fff;
+        border: 1px solid #000;
+        border-radius: 13px 11px 11px 6px;
+        position: absolute;
+        left: 175px;
+        top: 315px;
+    }
+
+    .feet2{
+        width: 70px;
+        height: 21px;
+        background: #fff;
+        border: 1px solid #000;
+        border-radius: 11px 13px 6px 11px;
+        position: absolute;
+        left: 257px;
+        top: 315px;
+    }
+
+    .ling{
+        width: 22px;
+        height: 22px;
+        /* background: #eae21b; */
+        background: -webkit-radial-gradient(73% 34%,circle,#fff 10%, #eae21b 30%);
+        border: 1px solid #333;
+        border-radius: 50%;
+        position: absolute;
+        left: 240px;
+        top: 218px;
+    }
+
+    .line2{
+        width: 20px;
+        height: 1px;
+        border: 1px solid #333;
+        position: absolute;
+        left: 241px;
+        top: 226px;
+    }
+
+    .point{
+        width: 5px;
+        height: 5px;
+        background: #000;
+        border-radius: 50%;
+        position: absolute;
+        left: 250px;
+        top: 231px;
+    }
+
+    .line3{
+        width: 4px;
+        height: 6px;
+        border-left: 1px solid #000;
+        position: absolute;
+        left: 252px;
+        top: 235px;
+    }
+
+    .item1{
+        width: 40px;
+        height: 30px;
+        background: url(images/things.png) no-repeat;
+        background-size: 616%;
+        position: absolute;
+        left: 210px;
+        top: 250px;
+        animation: food 3s cubic-bezier(.1,.72,.69,.95) infinite;
+        /* animation: food 4s ease-out infinite; */
+    }
+
+    .item2{
+        width: 40px;
+        height: 30px;
+        background: url(images/things.png) no-repeat -50px 0px;
+        background-size: 616%;
+        position: absolute;
+        left: 210px;
+        top: 250px;
+        animation: food 3s 0.5s cubic-bezier(.1,.72,.69,.95) infinite;
+        /* animation: food 4s cubic-bezier(.1,.72,.87,.64) infinite; */
+        /* animation: food 4s 0.5s ease-out infinite; */
+    }
+
+    .item3{
+        width: 40px;
+        height: 30px;
+        background: url(images/things.png) no-repeat -100px 0px;
+        background-size: 616%;
+        position: absolute;
+        left: 210px;
+        top: 250px;
+        animation: food 3s 1s cubic-bezier(.1,.72,.69,.95) infinite;
+        /* animation: food 3.5s 0.5s cubic-bezier(.1,.72,.87,.64) infinite; */
+        /* animation: food 4s 1s ease-out infinite; */
+    }
+
+    .item4{
+        width: 40px;
+        height: 30px;
+        background: url(images/things.png) no-repeat -100px -35px;
+        background-size: 616%;
+        position: absolute;
+        left: 210px;
+        top: 250px;
+        /* animation: food 3s 1s cubic-bezier(.1,.72,.87,.64) infinite; */
+        animation: food 3s 1.5s cubic-bezier(.1,.72,.69,.95) infinite;
+    }
+
+    .item5{
+        width: 40px;
+        height: 30px;
+        background: url(images/things.png) no-repeat -200px -98px;
+        background-size: 616%;
+        position: absolute;
+        left: 210px;
+        top: 250px;
+        /* animation: food 2.5s 1.5s cubic-bezier(.1,.72,.87,.64) infinite; */
+        animation: food 3s 2s cubic-bezier(.1,.72,.69,.95) infinite;
+    }
+
+    .item6{
+        width: 40px;
+        height: 30px;
+        background: url(images/things.png) no-repeat -52px -65px;
+        background-size: 616%;
+        position: absolute;
+        left: 210px;
+        top: 250px;
+        /* animation: food 2.5s 2s cubic-bezier(.1,.72,.87,.64) infinite; */
+        animation: food 3s 2.5s cubic-bezier(.1,.72,.69,.95) infinite;
+    }
+
+    @-webkit-keyframes food{
+        0%{
+            position: absolute;
+        left: 210px;
+        top: 250px;
+        }
+        100%{
+            position: absolute;
+        left: 520px;
+        top: 0px;
+        }
+    }
+
+    
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="head"></div>
+        <div class="face"></div>
+        <div class="eye1"></div>
+        <div class="eye2"></div>
+        <div class="eye01"></div>
+        <div class="wink1"></div>
+        <div class="wink2"></div>
+        <div class="eye02"></div>
+        <div class="nose"></div>
+        <div class="line1"></div>
+        <div class="mouth"></div>
+        <div class="beard1"></div>
+        <div class="beard2"></div>
+        <div class="beard3"></div>
+        <div class="beard4"></div>
+        <div class="beard5"></div>
+        <div class="beard6"></div>        
+        <div class="hand1"></div>
+        <div class="hand2"></div>
+        <div class="hand01"></div>
+        <div class="hand02"></div>
+        <div class="body1"></div>
+        <div class="body2"></div>
+        <div class="body3"></div>
+        <div class="scraf"></div>
+        
+        <div class="leg"></div>
+        <div class="feet1"></div>
+        <div class="feet2"></div>
+        <div class="ling"></div>
+        <div class="line2"></div>
+        <div class="point"></div>
+        <div class="line3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+        <div class="item5"></div>
+        <div class="item6"></div>
+        <div class="bag"></div>
+    </div>
+
+    
+</body>
+</html>
